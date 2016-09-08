@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Txprintco Event feature.
+ */
+
+include_once 'txprintco_event.features.inc';

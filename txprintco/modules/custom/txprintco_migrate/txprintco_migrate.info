@@ -1,0 +1,15 @@
+name = "Txprintco migration"
+description = "Populate content."
+package = "Txprintco"
+core = 7.x
+dependencies[] = migrate
+dependencies[] = migrate_extras
+
+; Handlers
+files[] = handlers/TxprintcoMigrateBase.php
+
+files[] = handlers/node/TxprintcoCompaniesMigrate.php
+files[] = handlers/node/TxprintcoEventsMigrate.php
+
+files[] = handlers/user/TxprintcoUsersMigrate.php
+
