@@ -85,9 +85,12 @@ angular.module('clientApp')
         // A 401 response was sent.
         return;
       }
-
+      console.log(data);
       angular.forEach(data[0].companies, function(value, key) {
-        data[0].companies[key].id = parseInt(value.id);
+        if(data[0].companies[key] == null) {
+		data[0].companies[key] = {};
+	}
+        data[0].companies[key].id = parseInt(key);
       });
 
       return data;
